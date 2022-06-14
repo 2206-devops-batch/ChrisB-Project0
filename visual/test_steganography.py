@@ -5,21 +5,6 @@ from steganography import write_text, encode_image, decode_image
 from time import sleep
 
 
-class TestSum(unittest.TestCase):
-
-    def test_sum_list(self):
-        """
-        Test that it can sum a list of integers
-        """
-        self.assertEqual(sum([1, 2, 3]), 6, "Should be 6")
-
-    def test_sum_tuple(self):
-        """
-        Test that it can sum a tuple of integers
-        """
-        self.assertEqual(sum((1, 2, 3)), 6, "Should be 6")
-
-
 class TestVisualSteganography(unittest.TestCase):
 
     def removeFile(location):
