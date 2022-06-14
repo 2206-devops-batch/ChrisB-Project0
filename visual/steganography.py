@@ -41,9 +41,8 @@ def write_text(text, img_size):
         fontsize += 1
         font = ImageFont.truetype(font_path, fontsize)
 
-    print('final font size', fontsize)
+    # print('final font size', fontsize)
     draw.text((25, 25), txt, font=font)  # put the text on the image
-
     return image
 
 

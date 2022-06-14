@@ -1,6 +1,8 @@
+import os
 import unittest
-
+from pathlib import Path
 from steganography import write_text, encode_image, decode_image
+from time import sleep
 
 class TestSum(unittest.TestCase):
 
@@ -27,7 +29,12 @@ class TestVisualSteganography(unittest.TestCase):
             3. write the text to image with draw.text
         returns an image
         """
-        pass
+        image = write_text("Your Secret Message Goes Here", [960, 960])
+        image.save("./temp_text_image.png")
+        self.assertEqual(str(type(image)), "<class 'PIL.Image.Image'>",
+                         "should be <class 'PIL.Image.Image'>")
+        sleep(10)
+        Path("./temp_text_image.png").unlink()
 
     def test_encode_image(self):
         """
