@@ -26,8 +26,9 @@ class TestVisualSteganography(unittest.TestCase):
         if os.path.exists(location):
             Path(location).unlink()
 
-    removeFile("../images/text_image_test.png")
-    removeFile("../images/encoded_image_test.png")
+    removeFile(f'../images/text_image_test.png')
+    removeFile(f'../images/encoded_image_test.png')
+    removeFile(f'../images/decoded_image_test.png')
 
     def test_write_text(self):
         """
@@ -83,7 +84,28 @@ class TestVisualSteganography(unittest.TestCase):
             4. save newly decoded image to filesystem
         returns nothing
         """
-        pass
+        text = "Your Secret Message Goes Here"
+
+        encoded_name = "encoded_image_test"
+        decoded_name = "decoded_image_test"
+
+        pic_name = "Me-in-august"
+        input_image = f'../images/{pic_name}.png'
+        encoded_image = f'../images/{encoded_name}.png'
+        decoded_output_image = f'../images/{decoded_name}.png'
+
+        fileExists = os.path.exists(decoded_output_image)
+        self.assertFalse(fileExists)
+
+        encode_image(input_image, text, encoded_name)
+        decode_image(encoded_image, decoded_name)
+
+        fileExists = os.path.exists(decoded_output_image)
+        self.assertTrue(fileExists)
+
+        sleep(1)
+        TestVisualSteganography.removeFile(encoded_image)
+        TestVisualSteganography.removeFile(decoded_output_image)
 
 
 if __name__ == '__main__':

@@ -21,7 +21,7 @@ def decode_image(file_location, decoded_name):
             else:
                 decoded_image.putpixel((i, j), (255, 182, 193))
 
-    decoded_image.save("images/{}.png".format(decoded_name))
+    decoded_image.save("../images/{}.png".format(decoded_name))
 
 
 def write_text(text, img_size):
