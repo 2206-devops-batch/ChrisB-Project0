@@ -21,6 +21,7 @@ class TestEndcodeImage(unittest.TestCase):
     def test_open_image(self):
         """
         Test that it can open a image file based on a give path
+        https://pillow.readthedocs.io/en/stable/reference/Image.html
         """
         pass
 
