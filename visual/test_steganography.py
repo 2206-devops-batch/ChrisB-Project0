@@ -1,5 +1,6 @@
 import unittest
 
+from steganography import write_text, encode_image, decode_image
 
 class TestSum(unittest.TestCase):
 
@@ -16,30 +17,37 @@ class TestSum(unittest.TestCase):
         self.assertEqual(sum((1, 2, 3)), 6, "Should be 6")
 
 
-class TestEndcodeImage(unittest.TestCase):
+class TestVisualSteganography(unittest.TestCase):
 
-    def test_open_image(self):
+    def test_write_text(self):
         """
-        Test that it can open a image file based on a give path
-        https://pillow.readthedocs.io/en/stable/reference/Image.html
+        Test that it can ---
+            1. create new image base on given size
+            2. configure font to be visible with ImageFont.trueType - (family, size, width, etc)
+            3. write the text to image with draw.text
+        returns an image
         """
         pass
 
-    def test_getting_image_properties(self):
+    def test_encode_image(self):
         """
-        Test that it can output useful data about our opened image
+        Test that it can ---
+            1. open an image and pull out expected properties (red_channel, green_channel, blue_channel, x_size, y_size)
+            2. create an image with given text to encode (same as first test) then convert it to a binary
+            3. create a blank image and iterate over it combining the 2 images above based on pixel density
+            4. save newly encoded image to filesystem
+        returns nonthing
         """
         pass
 
-    def test_create_new_image(self):
+    def test_decode_image(self):
         """
-        Test that it can create a new GRB image & load/set it to the same size as our input image
-        """
-        pass
-
-    def test_embeding_image(self):
-        """
-        Test that it can ...
+        Test that it can ---
+            1. open an encoded image & pull out the red value channel and size
+            2. create a new blank image
+            3. itterate over encoded image red channel for hidden message
+            4. save newly decoded image to filesystem
+        returns nothing
         """
         pass
 
