@@ -41,7 +41,6 @@ def write_text(text, img_size):
         fontsize += 1
         font = ImageFont.truetype(font_path, fontsize)
 
-    # print('final font size', fontsize)
     draw.text((25, 25), txt, font=font)  # put the text on the image
     return image
 
@@ -63,7 +62,6 @@ def encode_image(file_location, text, encoded_name):
 
     for i in range(x_size):
         for j in range(y_size):
-            pass
             red_channel_pix = bin(red_channel.getpixel((i, j)))
             tencode_pix = bin(bw_encode.getpixel((i, j)))
 
@@ -74,7 +72,7 @@ def encode_image(file_location, text, encoded_name):
             pixels[i, j] = (int(red_channel_pix, 2), green_channel.getpixel(
                 (i, j)), blue_channel.getpixel((i, j)))
 
-    encoded_image.save("images/{}.png".format(encoded_name))
+    encoded_image.save("../images/{}.png".format(encoded_name))
 
 
 if __name__ == "__main__":
