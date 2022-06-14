@@ -57,7 +57,22 @@ class TestVisualSteganography(unittest.TestCase):
             4. save newly encoded image to filesystem
         returns nonthing
         """
-        pass
+        text = "Your Secret Message Goes Here"
+
+        encoded_name = "encoded_image_test"
+        input_image = "../images/Me-in-august.png"
+        output_image = f'../images/{encoded_name}.png'
+
+        fileExists = os.path.exists(output_image)
+        self.assertFalse(fileExists)
+
+        encode_image(input_image, text, encoded_name)
+
+        fileExists = os.path.exists(output_image)
+        self.assertTrue(fileExists)
+
+        sleep(1)
+        TestVisualSteganography.removeFile(output_image)
 
     def test_decode_image(self):
         """
