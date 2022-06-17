@@ -172,6 +172,8 @@ Further Reading: HidingSecretsWithinEarshot-[Pt1]-&-[Pt2]
 <!-- [Interactive-Python]: http://interactivepython.org/runestone/static/everyday/2013/03/1_steganography.html -->
 [RGB-Color-Wheel]: http://www.colorspire.com/rgb-color-wheel
 
+[ADUIO-STEGANOGRAPHY]: https://gist.github.com/sumit-code/c3d5f27fdeda44dd0922e14263ede4c4
+
 <!-- HidingSecretsWithinEarshot -->
 [Pt1]:https://medium.com/@sumit.arora/audio-steganography-the-art-of-hiding-secrets-within-earshot-part-1-of-2-6a3bbd706e15
 [Pt2]:https://sumit-arora.medium.com/audio-steganography-the-art-of-hiding-secrets-within-earshot-part-2-of-2-c76b1be719b3
@@ -180,6 +182,15 @@ Further Reading: HidingSecretsWithinEarshot-[Pt1]-&-[Pt2]
 
 <!-- [Pseudonymization] -->
 [Pseudonymization]: https://en.wikipedia.org/wiki/Pseudonymization#:~:text=Pseudonymization%20is%20a%20data%20management,more%20artificial%20identifiers%2C%20or%20pseudonyms.
+
+https://www.chciken.com/digital/signal/processing/2020/05/13/guitar-tuner.html
+https://www.ideals.illinois.edu/bitstream/handle/2142/104007/ECE499-Sp2019-ding.pdf?sequence=2&isAllowed=y
+https://www.connollymusic.com/stringovation/how-your-violin-produces-sound
+https://www.physicscentral.com/explore/action/fiddle.cfm
+http://hyperphysics.phy-astr.gsu.edu/hbase/Music/mussca.html#c2
+http://hyperphysics.phy-astr.gsu.edu/hbase/Music/guita.html#c3
+http://hyperphysics.phy-astr.gsu.edu/hbase/Sound/timbre.html#c2
+http://hyperphysics.phy-astr.gsu.edu/hbase/Music/violin.html#:~:text=The%20violin%2C%20the%20most%20commonly,the%20A4%20%3D%20440Hz%20standard.
 
 <!-- Great -->
 [](https://faroit.com/)
