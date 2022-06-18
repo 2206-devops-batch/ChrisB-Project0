@@ -1,1 +1,10 @@
 __pycache__
+
+images/my_secret.*
+images/my_decoded_secret.*
+
+audio/my_secret_fair.*
+audio/my_decoded_secret_fair.*
+
+audio/my_secret.*
+audio/my_decoded_secret.*
