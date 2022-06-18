@@ -22,7 +22,7 @@ def encode_sound(file_location, text, encoded_name):
     frame_modified = bytes(frame_bytes)
 
     # Write bytes to a new wave audio file
-    with wave.open(f'../audio/{encoded_name}.wav', 'wb') as fd:
+    with wave.open(f'audio/{encoded_name}.wav', 'wb') as fd:
         fd.setparams(song.getparams())
         fd.writeframes(frame_modified)
     song.close()
@@ -44,7 +44,7 @@ def decode_sound(file_location, decoded_name):
 
     # Print the extracted text
     decoded_output = f'Sucessfully decoded: {decoded} from file {file_location}'
-    f = open(f'{decoded_name}.txt', "w")
+    f = open(f'audio/{decoded_name}.txt', "w")
     f.write(decoded_output)
     f.close()
     print(decoded_output)
@@ -52,14 +52,14 @@ def decode_sound(file_location, decoded_name):
 
 
 if __name__ == "__main__":
-    soundFiles = ["../audio/Silent.wav", "../audio/Fairground.wav"]
+    soundFiles = ["audio/Silent.wav", "audio/Fairground.wav"]
     sampleText = [
         "Peter Parker is the Spiderman!",
         "!!!!I am a Hacker keep it a secret or you will be in trouble!!!!"
     ]
 
     encode_sound(soundFiles[0], sampleText[0], "my_secret")
-    decode_sound("../audio/my_secret.wav", "my_decoded_secret")
+    decode_sound("audio/my_secret.wav", "my_decoded_secret")
 
     encode_sound(soundFiles[1], sampleText[1], "my_secret_fair")
-    decode_sound("../audio/my_secret_fair.wav", "my_decoded_secret_fair")
+    decode_sound("audio/my_secret_fair.wav", "my_decoded_secret_fair")

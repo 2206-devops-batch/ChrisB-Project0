@@ -153,9 +153,16 @@ Further Reading: HidingSecretsWithinEarshot-[Pt1]-&-[Pt2]
 ---
 ## Encoding & Decoding Secret Messages
 
-> Python3 steganography.py
-​
+> source venv/bin/activate
+> pip3 install -r requirements.txt
 
+> Python3 visual/steganography.py
+
+or
+
+> Python3 vocal/steganography.py
+
+> source deactivate
 
 ### Final Notes
 
