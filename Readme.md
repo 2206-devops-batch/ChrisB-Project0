@@ -162,7 +162,7 @@ or
 
 > Python3 vocal/steganography.py
 
-> source deactivate
+> deactivate
 
 ### Final Notes
 
