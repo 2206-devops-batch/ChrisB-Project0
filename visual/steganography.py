@@ -24,9 +24,7 @@ def decode_image(file_location, decoded_name):
     decoded_image.save("images/{}.png".format(decoded_name))
 
 
-def write_text(text, img_size):
-    font_path = "~/Library/Fonts/Arial Unicode.ttf"
-
+def write_text(font_path, text, img_size):
     image = Image.new("RGB", img_size)
     draw = ImageDraw.Draw(image)
     txt = text
@@ -45,15 +43,13 @@ def write_text(text, img_size):
     return image
 
 
-def encode_image(file_location, text, encoded_name):
-    image = Image.open(file_location)
+def encode_image(cover_image_location, text_font, text, encoded_name):
+    image = Image.open(cover_image_location)
     red_channel, green_channel, blue_channel = image.split()
-
-    x_size = image.size[0]
-    y_size = image.size[1]
+    x_size, y_size = image.size
 
     # txt draw
-    img_txt = write_text(text, image.size)
+    img_txt = write_text(text_font, text, image.size)
     bw_encode = img_txt.convert('1')
 
     # Create the new image and load the pixel map
@@ -73,15 +69,3 @@ def encode_image(file_location, text, encoded_name):
                 (i, j)), blue_channel.getpixel((i, j)))
 
     encoded_image.save("images/{}.png".format(encoded_name))
-
-
-if __name__ == "__main__":
-    encode_image("images/Me-in-august.png",
-                 "!!!!I am a Hacker keep it a secret or you will be in trouble!!!!", "my_secret")
-
-    decode_image("images/my_secret.png", "my_decoded_secret")
-
-
-# Inspiration from
-# https://stackoverflow.com/questions/4902198/pil-how-to-scale-text-size-in-relation-to-the-size-of-the-image
-# https://github.com/tempor1s/steganograpgy/blob/master/steganograpgy.py

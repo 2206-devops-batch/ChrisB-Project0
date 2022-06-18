@@ -25,7 +25,8 @@ class TestVisualSteganography(unittest.TestCase):
         """
         location = "../images/text_image_test.png"
 
-        image = write_text("Your Secret Message Goes Here", [960, 960])
+        text_font = "~/Library/Fonts/Arial Unicode.ttf"
+        image = write_text(text_font, "Your Secret Message Goes Here", [960, 960])
         image.save(location)
 
         self.assertEqual(str(type(image)), "<class 'PIL.Image.Image'>",
