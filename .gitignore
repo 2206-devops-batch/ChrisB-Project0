@@ -1,4 +1,7 @@
+venv
+yarn.lock
 __pycache__
+node_modules
 
 images/my_secret.*
 images/my_decoded_secret.*
