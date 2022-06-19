@@ -1,2 +1,6 @@
+autopep8==1.6.0
 Pillow==9.1.1
+pycodestyle==2.8.0
+toml==0.10.2
 Wave==0.0.2
+prettier==2.7.1
