@@ -46,20 +46,6 @@ def decode_sound(file_location, decoded_name):
     decoded_output = f'Sucessfully decoded: {decoded} from file {file_location}'
     f = open(f'audio/{decoded_name}.txt', "w")
     f.write(decoded_output)
-    f.close()
     print(decoded_output)
     song.close()
-
-
-if __name__ == "__main__":
-    soundFiles = ["audio/Silent.wav", "audio/Fairground.wav"]
-    sampleText = [
-        "Peter Parker is the Spiderman!",
-        "!!!!I am a Hacker keep it a secret or you will be in trouble!!!!"
-    ]
-
-    encode_sound(soundFiles[0], sampleText[0], "my_secret")
-    decode_sound("audio/my_secret.wav", "my_decoded_secret")
-
-    encode_sound(soundFiles[1], sampleText[1], "my_secret_fair")
-    decode_sound("audio/my_secret_fair.wav", "my_decoded_secret_fair")
+    f.close()

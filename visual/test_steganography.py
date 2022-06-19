@@ -29,8 +29,7 @@ class TestVisualSteganography(unittest.TestCase):
         image = write_text(text_font, "Your Secret Message Goes Here", [960, 960])
         image.save(location)
 
-        self.assertEqual(str(type(image)), "<class 'PIL.Image.Image'>",
-                         "should be <class 'PIL.Image.Image'>")
+        self.assertEqual(str(type(image)), "<class 'PIL.Image.Image'>", "should be <class 'PIL.Image.Image'>")
 
         sleep(1)
         TestVisualSteganography.removeFile(location)

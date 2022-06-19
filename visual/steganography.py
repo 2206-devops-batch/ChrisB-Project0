@@ -1,5 +1,4 @@
 from PIL import Image, ImageFont, ImageDraw
-import textwrap
 
 
 def decode_image(file_location, decoded_name):
